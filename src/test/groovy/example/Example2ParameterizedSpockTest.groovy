@@ -38,4 +38,22 @@ class Example2ParameterizedSpockTest extends Specification {
         b << [1, 3, 7]
         c << [2, 5, 10]
     }
+
+    def "parameterized test 3"() {
+        given:
+        def calc = new Calculator(a)
+
+        when:
+        calc.add(b)
+
+        then:
+        calc.getValue() == c
+
+        where:
+        [a, b, c] << [[1, 1, 2], [2, 3, 5], [3, 7, 10]]
+    }
+
+    List<List<Integer>> getParams() {
+        [[1, 1, 2], [2, 3, 5], [3, 7, 10]]
+    }
 }
