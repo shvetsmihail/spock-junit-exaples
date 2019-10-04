@@ -8,7 +8,7 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class Example4IntegrationJUnitTest {
+public class Example4ClosureJUnitTest {
 
     @Test
     public void integrationTest() {
